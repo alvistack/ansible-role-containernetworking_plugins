@@ -30,7 +30,10 @@
 - hosts: all
   remote_user: root
   tasks:
-    - name: which flannel
-      command: which flannel
-      register: result
-      changed_when: result is not succeeded
+    - name: locate flannel
+      file:
+        dest: "/usr/local/bin/flannel"
+        owner: "root"
+        group: "root"
+        mode: "0755"
+        state: "file"
