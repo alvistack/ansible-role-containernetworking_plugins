@@ -44,6 +44,17 @@
     loop_var: "loop_var"
   tags: cni_plugins
 
+- name: prepare directories
+  file:
+    dest: "{{ item.dest }}"
+    owner: "{{ item.owner | default('root') }}"
+    group: "{{ item.group | default('root') }}"
+    mode: "{{ item.mode | default('0755') }}"
+    state: "{{ item.state | default('directory') }}"
+  with_items:
+    - { dest: "/usr/local/bin" }
+  tags: cni_plugins
+
 - name: download and unarchive
   unarchive:
     src: "{{ cni_plugins_download_url }}"
@@ -54,4 +65,27 @@
     mode: "0755"
   register: result
   until: result is succeeded
+  tags: cni_plugins
+
+- name: prepare files
+  file:
+    dest: "{{ item.dest }}"
+    owner: "{{ item.owner | default('root') }}"
+    group: "{{ item.group | default('root') }}"
+    mode: "{{ item.mode | default('0644') }}"
+    state: "{{ item.state | default('file') }}"
+  with_items:
+    - { dest: "/usr/local/bin/bridge", mode: "0755" }
+    - { dest: "/usr/local/bin/dhcp", mode: "0755" }
+    - { dest: "/usr/local/bin/flannel", mode: "0755" }
+    - { dest: "/usr/local/bin/host-device", mode: "0755" }
+    - { dest: "/usr/local/bin/host-local", mode: "0755" }
+    - { dest: "/usr/local/bin/ipvlan", mode: "0755" }
+    - { dest: "/usr/local/bin/loopback", mode: "0755" }
+    - { dest: "/usr/local/bin/macvlan", mode: "0755" }
+    - { dest: "/usr/local/bin/portmap", mode: "0755" }
+    - { dest: "/usr/local/bin/ptp", mode: "0755" }
+    - { dest: "/usr/local/bin/sample", mode: "0755" }
+    - { dest: "/usr/local/bin/tuning", mode: "0755" }
+    - { dest: "/usr/local/bin/vlan", mode: "0755" }
   tags: cni_plugins
