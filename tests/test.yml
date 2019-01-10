@@ -26,14 +26,3 @@
   remote_user: root
   roles:
     - role: cni-plugins
-
-- hosts: all
-  remote_user: root
-  tasks:
-    - name: locate flannel
-      file:
-        dest: "/usr/local/bin/flannel"
-        owner: "root"
-        group: "root"
-        mode: "0755"
-        state: "file"
