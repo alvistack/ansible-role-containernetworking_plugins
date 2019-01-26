@@ -26,11 +26,3 @@
   remote_user: root
   roles:
     - role: cni-plugins
-
-- hosts: all
-  remote_user: root
-  tasks:
-    - name: which flannel
-      command: which flannel
-      register: result
-      changed_when: result is not succeeded
