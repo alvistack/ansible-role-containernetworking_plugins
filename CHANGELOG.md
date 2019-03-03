@@ -1,6 +1,10 @@
 # Ansible Role for cni-plugins
 
-## 2.4.0 - TBC
+## 2.5.0 - TBC
+
+### Major Changes
+
+## 2.4.0 - 2019-03-03
 
 ### Major Changes
 
