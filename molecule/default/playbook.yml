@@ -17,5 +17,4 @@
 - hosts: all
   remote_user: root
   roles:
-    - role: bootstrap
     - role: cni-plugins
