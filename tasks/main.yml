@@ -55,9 +55,20 @@
     - { dest: "/opt/cni/bin" }
   tags: cni_plugins
 
-- name: download and unarchive
+- name: download archive
+  get_url:
+    url: "{{ item.url }}"
+    dest: "{{ item.dest }}"
+    checksum: "{{ item.checksum }}"
+  with_items:
+    - "{{ cni_plugins_download }}"
+  register: result
+  until: result is succeeded
+  tags: cni_plugins
+
+- name: unarchive package
   unarchive:
-    src: "{{ cni_plugins_download_url }}"
+    src: "{{ cni_plugins_download.dest }}"
     dest: "/opt/cni/bin"
     remote_src: true
     owner: "root"
