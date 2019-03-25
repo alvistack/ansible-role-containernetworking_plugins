@@ -18,4 +18,7 @@
 cni_plugins_version: "v0.7.4"
 
 # URL for download cni-plugins binary.
-cni_plugins_download_url: "https://github.com/containernetworking/plugins/releases/download/{{ cni_plugins_version }}/cni-plugins-amd64-{{ cni_plugins_version }}.tgz"
+cni_plugins_download:
+  url: "https://github.com/containernetworking/plugins/releases/download/{{ cni_plugins_version }}/cni-plugins-amd64-{{ cni_plugins_version }}.tgz"
+  dest: "/tmp/cni-plugins-amd64-{{ cni_plugins_version }}.tgz"
+  checksum: "sha1:1830ee323cfd360615a6c9efc0ff28c622a6f087"
