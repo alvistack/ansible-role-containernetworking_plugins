@@ -14,10 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# cni-plugins version.
-cni_plugins_version: "v0.7.5"
-
 # URL for download cni-plugins binary.
+cni_plugins_version: "v0.7.5"
 cni_plugins_download:
   url: "https://github.com/containernetworking/plugins/releases/download/{{ cni_plugins_version }}/cni-plugins-amd64-{{ cni_plugins_version }}.tgz"
   dest: "/tmp/cni-plugins-amd64-{{ cni_plugins_version }}.tgz"
