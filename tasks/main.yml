@@ -52,6 +52,7 @@
     mode: "{{ item.mode | default('0755') }}"
     state: "{{ item.state | default('directory') }}"
   with_items:
+    - { dest: "/etc/cni/net.d" }
     - { dest: "/opt/cni/bin" }
   tags: cni_plugins
 
