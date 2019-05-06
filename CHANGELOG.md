@@ -1,8 +1,10 @@
-# Ansible Role for cni-plugins
+# Ansible Role for Kubernetes CNI PLugins
 
 ## 2.7.0 - TBC
 
 ### Major Changes
+
+  - Rename from cni-plugins to kubernetes-cni
 
 ## 2.6.0 - 2019-05-04
 

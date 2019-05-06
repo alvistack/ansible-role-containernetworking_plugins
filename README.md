@@ -1,11 +1,11 @@
-# Ansible Role for cni-plugins
+# Ansible Role for Kubernetes CNI Plugins
 
-[![Travis](https://img.shields.io/travis/alvistack/ansible-role-cni-plugins.svg)](https://travis-ci.org/alvistack/ansible-role-cni-plugins)
-[![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-cni-plugins.svg)](https://github.com/alvistack/ansible-role-cni-plugins)
-[![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-cni-plugins.svg)](https://github.com/alvistack/ansible-role-cni-plugins/blob/master/LICENSE)
-[![Ansible Role](https://img.shields.io/badge/galaxy-alvistack.cni_plugins-blue.svg)](https://galaxy.ansible.com/alvistack/cni_plugins)
+[![Travis](https://img.shields.io/travis/alvistack/ansible-role-kubernetes-cni.svg)](https://travis-ci.org/alvistack/ansible-role-kubernetes-cni)
+[![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-kubernetes-cni.svg)](https://github.com/alvistack/ansible-role-kubernetes-cni)
+[![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-kubernetes-cni.svg)](https://github.com/alvistack/ansible-role-kubernetes-cni/blob/master/LICENSE)
+[![Ansible Role](https://img.shields.io/badge/galaxy-alvistack.kubernetes_cni-blue.svg)](https://galaxy.ansible.com/alvistack/kubernetes_cni)
 
-Ansible Role for cni-plugins Installation.
+Ansible Role for Kubernetes CNI Plugins Installation.
 
 ## Requirements
 
