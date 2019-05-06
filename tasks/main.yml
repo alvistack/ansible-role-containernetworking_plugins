@@ -27,7 +27,7 @@
       skip: true
   loop_control:
     loop_var: "loop_var"
-  tags: cni_plugins
+  tags: kubernetes_cni
 
 - name: include release specific tasks
   include_tasks: "{{ loop_var }}"
@@ -42,7 +42,7 @@
       skip: true
   loop_control:
     loop_var: "loop_var"
-  tags: cni_plugins
+  tags: kubernetes_cni
 
 - name: prepare directories
   file:
@@ -54,7 +54,7 @@
   with_items:
     - { dest: "/etc/cni/net.d" }
     - { dest: "/opt/cni/bin" }
-  tags: cni_plugins
+  tags: kubernetes_cni
 
 - name: download archive
   get_url:
@@ -62,20 +62,20 @@
     dest: "{{ item.dest }}"
     checksum: "{{ item.checksum }}"
   with_items:
-    - "{{ cni_plugins_download }}"
+    - "{{ kubernetes_cni_download }}"
   register: result
   until: result is succeeded
-  tags: cni_plugins
+  tags: kubernetes_cni
 
 - name: unarchive package
   unarchive:
-    src: "{{ cni_plugins_download.dest }}"
+    src: "{{ kubernetes_cni_download.dest }}"
     dest: "/opt/cni/bin"
     remote_src: true
     owner: "root"
     group: "root"
     mode: "0755"
-  tags: cni_plugins
+  tags: kubernetes_cni
 
 - name: prepare files
   file:
@@ -98,4 +98,4 @@
     - { dest: "/opt/cni/bin/sample", mode: "0755" }
     - { dest: "/opt/cni/bin/tuning", mode: "0755" }
     - { dest: "/opt/cni/bin/vlan", mode: "0755" }
-  tags: cni_plugins
+  tags: kubernetes_cni

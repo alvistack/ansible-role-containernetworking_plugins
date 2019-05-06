@@ -14,9 +14,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# URL for download cni-plugins binary.
-cni_plugins_version: "v0.7.5"
-cni_plugins_download:
-  url: "https://github.com/containernetworking/plugins/releases/download/{{ cni_plugins_version }}/cni-plugins-amd64-{{ cni_plugins_version }}.tgz"
-  dest: "/tmp/cni-plugins-amd64-{{ cni_plugins_version }}.tgz"
+# URL for download kubernetes-cni binary.
+kubernetes_cni_version: "v0.7.5"
+kubernetes_cni_download:
+  url: "https://github.com/containernetworking/plugins/releases/download/{{ kubernetes_cni_version }}/cni-plugins-amd64-{{ kubernetes_cni_version }}.tgz"
+  dest: "/tmp/cni-plugins-amd64-{{ kubernetes_cni_version }}.tgz"
   checksum: "sha1:52e9d2de8a5f927307d9397308735658ee44ab8d"

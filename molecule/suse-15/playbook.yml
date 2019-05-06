@@ -17,4 +17,4 @@
 - hosts: all
   remote_user: root
   roles:
-    - role: cni-plugins
+    - role: kubernetes-cni
