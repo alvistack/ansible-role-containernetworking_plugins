@@ -97,7 +97,6 @@
     - { dest: "/opt/cni/bin/macvlan", mode: "0755" }
     - { dest: "/opt/cni/bin/portmap", mode: "0755" }
     - { dest: "/opt/cni/bin/ptp", mode: "0755" }
-    - { dest: "/opt/cni/bin/sample", mode: "0755" }
     - { dest: "/opt/cni/bin/sbr", mode: "0755" }
     - { dest: "/opt/cni/bin/static", mode: "0755" }
     - { dest: "/opt/cni/bin/tuning", mode: "0755" }
