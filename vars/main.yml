@@ -13,3 +13,17 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+_kubernetes_cni_download:
+  v0.8.0:
+    url: "https://github.com/containernetworking/plugins/releases/download/v0.8.0/cni-plugins-linux-amd64-v0.8.0.tgz"
+    dest: "/tmp/cni-plugins-amd64-v0.8.0.tgz"
+    checksum: "sha1:5567b8e0f3469cc211f1f25610b1a6633b996cc0"
+  v0.7.5:
+    url: "https://github.com/containernetworking/plugins/releases/download/v0.7.5/cni-plugins-amd64-v0.7.5.tgz"
+    dest: "/tmp/cni-plugins-amd64-v0.7.5.tgz"
+    checksum: "sha1:52e9d2de8a5f927307d9397308735658ee44ab8d"
+  v0.7.4:
+    url: "https://github.com/containernetworking/plugins/releases/download/v0.7.4/cni-plugins-amd64-v0.7.4.tgz"
+    dest: "/tmp/cni-plugins-amd64-v0.7.4.tgz"
+    checksum: "sha1:1830ee323cfd360615a6c9efc0ff28c622a6f087"
