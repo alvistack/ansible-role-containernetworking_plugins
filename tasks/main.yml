@@ -55,7 +55,7 @@
     group: "{{ item.group | default('root') }}"
     mode: "{{ item.mode | default('0755') }}"
     state: "{{ item.state | default('directory') }}"
-  with_items:
+  loop:
     - { dest: "/etc/cni/net.d" }
     - { dest: "/opt/cni/bin" }
   tags: kubernetes_cni
@@ -65,7 +65,7 @@
     url: "{{ item.url }}"
     dest: "{{ item.dest }}"
     checksum: "{{ item.checksum }}"
-  with_items:
+  loop:
     - "{{ kubernetes_cni_download }}"
   register: result
   until: result is succeeded
@@ -88,7 +88,7 @@
     group: "{{ item.group | default('root') }}"
     mode: "{{ item.mode | default('0644') }}"
     state: "{{ item.state | default('file') }}"
-  with_items:
+  loop:
     - { dest: "/opt/cni/bin/bandwidth", mode: "0755" }
     - { dest: "/opt/cni/bin/bridge", mode: "0755" }
     - { dest: "/opt/cni/bin/dhcp", mode: "0755" }
