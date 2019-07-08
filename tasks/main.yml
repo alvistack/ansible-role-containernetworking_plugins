@@ -19,32 +19,32 @@
   tags: kubernetes_cni
 
 - name: include release specific variables
-  include_vars: "{{ loop_var }}"
-  with_first_found:
-    - files:
+  include_vars: "{{ lookup('first_found', _params) }}"
+  vars:
+    _params:
+      files:
         - "{{ ansible_distribution | lower }}-{{ ansible_distribution_version | lower }}.yml"
         - "{{ ansible_distribution | lower }}-{{ ansible_distribution_major_version | lower }}.yml"
         - "{{ ansible_os_family | lower }}-{{ ansible_distribution_major_version | lower }}.yml"
         - "{{ ansible_distribution | lower }}.yml"
         - "{{ ansible_os_family | lower }}.yml"
-      paths: "../vars"
-  loop_control:
-    loop_var: "loop_var"
+      paths:
+        - "../vars"
   ignore_errors: true
   tags: kubernetes_cni
 
 - name: include release specific tasks
-  include_tasks: "{{ loop_var }}"
-  with_first_found:
-    - files:
+  include_tasks: "{{ lookup('first_found', _params) }}"
+  vars:
+    _params:
+      files:
         - "{{ ansible_distribution | lower }}-{{ ansible_distribution_version | lower }}.yml"
         - "{{ ansible_distribution | lower }}-{{ ansible_distribution_major_version | lower }}.yml"
         - "{{ ansible_os_family | lower }}-{{ ansible_distribution_major_version | lower }}.yml"
         - "{{ ansible_distribution | lower }}.yml"
         - "{{ ansible_os_family | lower }}.yml"
-      paths: "."
-  loop_control:
-    loop_var: "loop_var"
+      paths:
+        - "."
   ignore_errors: true
   tags: kubernetes_cni
 
@@ -55,7 +55,7 @@
     group: "{{ item.group | default('root') }}"
     mode: "{{ item.mode | default('0755') }}"
     state: "{{ item.state | default('directory') }}"
-  with_items:
+  loop:
     - { dest: "/etc/cni/net.d" }
     - { dest: "/opt/cni/bin" }
   tags: kubernetes_cni
@@ -65,7 +65,7 @@
     url: "{{ item.url }}"
     dest: "{{ item.dest }}"
     checksum: "{{ item.checksum }}"
-  with_items:
+  loop:
     - "{{ kubernetes_cni_download }}"
   register: result
   until: result is succeeded
@@ -88,7 +88,7 @@
     group: "{{ item.group | default('root') }}"
     mode: "{{ item.mode | default('0644') }}"
     state: "{{ item.state | default('file') }}"
-  with_items:
+  loop:
     - { dest: "/opt/cni/bin/bandwidth", mode: "0755" }
     - { dest: "/opt/cni/bin/bridge", mode: "0755" }
     - { dest: "/opt/cni/bin/dhcp", mode: "0755" }
