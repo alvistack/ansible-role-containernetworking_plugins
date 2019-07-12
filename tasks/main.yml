@@ -58,6 +58,7 @@
   loop:
     - { dest: "/etc/cni/net.d" }
     - { dest: "/opt/cni/bin" }
+    - { dest: "{{ kubernetes_cni_download.dest | dirname }}" }
   tags: kubernetes_cni
 
 - name: download archive
