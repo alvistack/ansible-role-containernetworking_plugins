@@ -68,18 +68,18 @@
     checksum: "{{ item.checksum }}"
   loop:
     - "{{ kubernetes_cni_download }}"
-  register: result
-  until: result is succeeded
+  register: get_url_result
+  until: get_url_result is succeeded
   tags: kubernetes_cni
 
 - name: unarchive package
-  unarchive:
-    src: "{{ kubernetes_cni_download.dest }}"
-    dest: "/opt/cni/bin"
-    remote_src: true
-    owner: "root"
-    group: "root"
-    mode: "0755"
+  shell: |
+    set -o pipefail
+    cd /opt/cni/bin
+    TMP_DIR="`mktemp -d`" && tar -zx -C $TMP_DIR -f {{ kubernetes_cni_download.dest }} && mv $TMP_DIR/* . && rm -rf $TMP_DIR
+  args:
+    executable: "/bin/bash"
+  when: get_url_result is changed
   tags: kubernetes_cni
 
 - name: prepare files
