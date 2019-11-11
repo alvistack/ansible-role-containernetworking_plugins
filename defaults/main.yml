@@ -15,7 +15,7 @@
 # limitations under the License.
 
 # kubernetes-cni version.
-kubernetes_cni_version: "v0.8.2"
+kubernetes_cni_version: "v0.8.3"
 
 # kubernetes-cni download details.
 kubernetes_cni_download: "{{ _kubernetes_cni_download[kubernetes_cni_version] }}"
