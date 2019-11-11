@@ -15,6 +15,10 @@
 # limitations under the License.
 
 _kubernetes_cni_download:
+  v0.8.3:
+    url: "https://github.com/containernetworking/plugins/releases/download/v0.8.3/cni-plugins-linux-amd64-v0.8.3.tgz"
+    dest: "/var/cache/ansible/cni-plugins-amd64-v0.8.3.tgz"
+    checksum: "sha1:f662ec5b648e114802276f8f353ad48a3376da47"
   v0.8.2:
     url: "https://github.com/containernetworking/plugins/releases/download/v0.8.2/cni-plugins-linux-amd64-v0.8.2.tgz"
     dest: "/var/cache/ansible/cni-plugins-amd64-v0.8.2.tgz"
