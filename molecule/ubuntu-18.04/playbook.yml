@@ -19,4 +19,4 @@
   become: true
   roles:
     - role: python
-    - role: kubernetes-cni
+    - role: kubernetes_cni
