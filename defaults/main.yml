@@ -14,8 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# kubernetes-cni version.
-kubernetes_cni_version: "v0.8.5"
+# CNI Plugins version.
+cni_plugins_version: "v0.8.5"
 
-# kubernetes-cni download details.
-kubernetes_cni_download: "{{ _kubernetes_cni_download[kubernetes_cni_version] }}"
+# CNI Plugins download details.
+cni_plugins_download: "{{ _cni_plugins_download[cni_plugins_version] }}"

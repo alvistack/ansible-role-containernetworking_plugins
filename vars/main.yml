@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_kubernetes_cni_download:
+_cni_plugins_download:
   v0.8.5:
     url: "https://github.com/containernetworking/plugins/releases/download/v0.8.5/cni-plugins-linux-amd64-v0.8.5.tgz"
     dest: "{{ ansible_user_dir }}/.ansible/tmp/cni-plugins-amd64-v0.8.5.tgz"

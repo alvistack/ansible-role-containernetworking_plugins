@@ -1,4 +1,4 @@
-# Ansible Role for Kubernetes CNI PLugins
+# Ansible Role for Kubernetes CNI Plugins
 
 ## 4.3.0 - TBC
 
@@ -8,6 +8,7 @@
   - Migrate group name to lowercase or underline
   - Migrate molecule `group_vars` to file
   - Download archives to `{{ ansible_user_dir }}/.ansible/tmp`
+  - Rename role as `cni_plugins`
 
 ## 4.2.0 - 2020-02-13
 
