@@ -79,7 +79,7 @@
   shell: |
     set -o pipefail
     cd /opt/cni/bin
-    TMP_DIR="`mktemp -d`" \
+    TMP_DIR="$(mktemp -d)" \
       && tar -zx -C $TMP_DIR -f {{ cni_plugins_download.dest }} \
       && mv $TMP_DIR/* . \
       && rm -rf $TMP_DIR
