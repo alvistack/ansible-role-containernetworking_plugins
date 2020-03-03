@@ -17,6 +17,9 @@
 - hosts: all
   remote_user: root
   become: true
-  roles:
-    - role: python
-    - role: cni_plugins
+  tasks:
+    - include_role:
+        name: python
+
+    - include_role:
+        name: cni_plugins
