@@ -8,6 +8,7 @@
   - Migrate role name to lowercase or underline
   - Migrate group name to lowercase or underline
   - Migrate molecule `group_vars` to file
+  - Consolidate molecule tests into `default` (noop)
   - Download archives to `{{ ansible_user_dir }}/.ansible/tmp`
   - Rename role as `cni_plugins`
 
