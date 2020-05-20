@@ -78,6 +78,8 @@
 - name: unarchive package
   shell: |
     set -o pipefail
+    rm -rf /opt/cni/bin \
+      && mkdir -p /opt/cni/bin
     cd /opt/cni/bin
     TMP_DIR="$(mktemp -d)" \
       && tar -zx -C $TMP_DIR -f {{ cni_plugins_download.dest }} \
@@ -88,6 +90,17 @@
   when: get_url_result is changed
   tags: cni_plugins
 
+- name: copy templates
+  template:
+    dest: "{{ item.dest }}"
+    src: "{{ item.src | default('./templates' + item.dest + '.j2') }}"
+    owner: "{{ item.owner | default('root') }}"
+    group: "{{ item.group | default('root') }}"
+    mode: "{{ item.mode | default('0644') }}"
+  loop:
+    - { dest: "/etc/cni/net.d/99-loopback.conf" }
+  tags: cni_plugins
+
 - name: prepare files
   file:
     dest: "{{ item.dest }}"
@@ -96,6 +109,7 @@
     mode: "{{ item.mode | default('0644') }}"
     state: "{{ item.state | default('file') }}"
   loop:
+    - { dest: "/etc/cni/net.d/99-loopback.conf" }
     - { dest: "/opt/cni/bin/bandwidth", mode: "0755" }
     - { dest: "/opt/cni/bin/bridge", mode: "0755" }
     - { dest: "/opt/cni/bin/dhcp", mode: "0755" }
