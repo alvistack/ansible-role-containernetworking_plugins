@@ -9,7 +9,7 @@ Ansible Role for Kubernetes CNI Plugins Installation.
 
 ## Requirements
 
-This role require Ansible 2.9 or higher.
+This role require Ansible 2.10 or higher.
 
 This role was designed for:
 
