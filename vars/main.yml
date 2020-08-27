@@ -15,6 +15,10 @@
 # limitations under the License.
 
 _cni_plugins_download:
+  v0.8.7:
+    url: "https://github.com/containernetworking/plugins/releases/download/v0.8.7/cni-plugins-linux-amd64-v0.8.7.tgz"
+    dest: "{{ ansible_user_dir }}/.ansible/tmp/cni-plugins-amd64-v0.8.7.tgz"
+    checksum: "sha1:96a30cb67e33da95fb1d99f93dd787c2a3c08627"
   v0.8.6:
     url: "https://github.com/containernetworking/plugins/releases/download/v0.8.6/cni-plugins-linux-amd64-v0.8.6.tgz"
     dest: "{{ ansible_user_dir }}/.ansible/tmp/cni-plugins-amd64-v0.8.6.tgz"
@@ -23,26 +27,6 @@ _cni_plugins_download:
     url: "https://github.com/containernetworking/plugins/releases/download/v0.8.5/cni-plugins-linux-amd64-v0.8.5.tgz"
     dest: "{{ ansible_user_dir }}/.ansible/tmp/cni-plugins-amd64-v0.8.5.tgz"
     checksum: "sha1:677d218b62c0ef941c1d0b606d6570faa5277ffd"
-  v0.8.4:
-    url: "https://github.com/containernetworking/plugins/releases/download/v0.8.4/cni-plugins-linux-amd64-v0.8.4.tgz"
-    dest: "{{ ansible_user_dir }}/.ansible/tmp/cni-plugins-amd64-v0.8.4.tgz"
-    checksum: "sha1:ffe4b56af04b93ba9f20dd464239558d7141fbae"
-  v0.8.3:
-    url: "https://github.com/containernetworking/plugins/releases/download/v0.8.3/cni-plugins-linux-amd64-v0.8.3.tgz"
-    dest: "{{ ansible_user_dir }}/.ansible/tmp/cni-plugins-amd64-v0.8.3.tgz"
-    checksum: "sha1:f662ec5b648e114802276f8f353ad48a3376da47"
-  v0.8.2:
-    url: "https://github.com/containernetworking/plugins/releases/download/v0.8.2/cni-plugins-linux-amd64-v0.8.2.tgz"
-    dest: "{{ ansible_user_dir }}/.ansible/tmp/cni-plugins-amd64-v0.8.2.tgz"
-    checksum: "sha1:e2b4b541218d611710a8ccbec6c2b34decea2884"
-  v0.8.1:
-    url: "https://github.com/containernetworking/plugins/releases/download/v0.8.1/cni-plugins-linux-amd64-v0.8.1.tgz"
-    dest: "{{ ansible_user_dir }}/.ansible/tmp/cni-plugins-amd64-v0.8.1.tgz"
-    checksum: "sha1:662d4c4a3234ca36f5dd594878fa48b7a365df76"
-  v0.8.0:
-    url: "https://github.com/containernetworking/plugins/releases/download/v0.8.0/cni-plugins-linux-amd64-v0.8.0.tgz"
-    dest: "{{ ansible_user_dir }}/.ansible/tmp/cni-plugins-amd64-v0.8.0.tgz"
-    checksum: "sha1:5567b8e0f3469cc211f1f25610b1a6633b996cc0"
   v0.7.5:
     url: "https://github.com/containernetworking/plugins/releases/download/v0.7.5/cni-plugins-amd64-v0.7.5.tgz"
     dest: "{{ ansible_user_dir }}/.ansible/tmp/cni-plugins-amd64-v0.7.5.tgz"
