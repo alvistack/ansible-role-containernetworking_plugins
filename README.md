@@ -1,6 +1,6 @@
 # Ansible Role for Kubernetes CNI Plugins
 
-[![Travis](https://img.shields.io/travis/com/alvistack/ansible-role-cni_plugins.svg)](https://travis-ci.com/alvistack/ansible-role-cni_plugins)
+[![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/ansible-role-cni_plugins/master)](https://gitlab.com/alvistack/ansible-role-cni_plugins/-/pipelines)
 [![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-cni_plugins.svg)](https://github.com/alvistack/ansible-role-cni_plugins/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-cni_plugins.svg)](https://github.com/alvistack/ansible-role-cni_plugins/blob/master/LICENSE)
 [![Ansible Role](https://img.shields.io/badge/galaxy-alvistack.cni_plugins-blue.svg)](https://galaxy.ansible.com/alvistack/cni_plugins)
