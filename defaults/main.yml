@@ -15,7 +15,7 @@
 # limitations under the License.
 
 # CNI Plugins version.
-cni_plugins_version: "v0.8.7"
+cni_plugins_version: "v0.9.0"
 
 # CNI Plugins download details.
 cni_plugins_download: "{{ _cni_plugins_download[cni_plugins_version] }}"
