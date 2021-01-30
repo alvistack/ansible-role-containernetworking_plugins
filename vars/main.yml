@@ -17,17 +17,17 @@
 _cni_plugins_download:
   "v0.9.0":
     url: "https://github.com/containernetworking/plugins/releases/download/v0.9.0/cni-plugins-linux-amd64-v0.9.0.tgz"
-    dest: "{{ ansible_user_dir }}/.ansible/tmp/cni-plugins-linux-amd64-v0.9.0.tgz"
-    checksum: "sha1:ec06b9603044f761d86b32fd075e53b9b42eecc5"
+    dest: "/var/cache/ansible/58a58d389895ba9f9bbd3ef330f186c0bb7484136d0bfb9b50152eed55d9ec24/cni-plugins-linux-amd64-v0.9.0.tgz"
+    checksum: "sha256:58a58d389895ba9f9bbd3ef330f186c0bb7484136d0bfb9b50152eed55d9ec24"
   "v0.8.7":
     url: "https://github.com/containernetworking/plugins/releases/download/v0.8.7/cni-plugins-linux-amd64-v0.8.7.tgz"
-    dest: "{{ ansible_user_dir }}/.ansible/tmp/cni-plugins-linux-amd64-v0.8.7.tgz"
-    checksum: "sha1:96a30cb67e33da95fb1d99f93dd787c2a3c08627"
+    dest: "/var/cache/ansible/977824932d5667c7a37aa6a3cbba40100a6873e7bd97e83e8be837e3e7afd0a8/cni-plugins-linux-amd64-v0.8.7.tgz"
+    checksum: "sha256:977824932d5667c7a37aa6a3cbba40100a6873e7bd97e83e8be837e3e7afd0a8"
   "v0.8.6":
     url: "https://github.com/containernetworking/plugins/releases/download/v0.8.6/cni-plugins-linux-amd64-v0.8.6.tgz"
-    dest: "{{ ansible_user_dir }}/.ansible/tmp/cni-plugins-linux-amd64-v0.8.6.tgz"
-    checksum: "sha1:a31251105250279fe57b4474d91d2db1d4d48b5a"
+    dest: "/var/cache/ansible/994fbfcdbb2eedcfa87e48d8edb9bb365f4e2747a7e47658482556c12fd9b2f5/cni-plugins-linux-amd64-v0.8.6.tgz"
+    checksum: "sha256:994fbfcdbb2eedcfa87e48d8edb9bb365f4e2747a7e47658482556c12fd9b2f5"
   "v0.8.5":
     url: "https://github.com/containernetworking/plugins/releases/download/v0.8.5/cni-plugins-linux-amd64-v0.8.5.tgz"
-    dest: "{{ ansible_user_dir }}/.ansible/tmp/cni-plugins-linux-amd64-v0.8.5.tgz"
-    checksum: "sha1:677d218b62c0ef941c1d0b606d6570faa5277ffd"
+    dest: "/var/cache/ansible/bd682ffcf701e8f83283cdff7281aad0c83b02a56084d6e601216210732833f9/cni-plugins-linux-amd64-v0.8.5.tgz"
+    checksum: "sha256:bd682ffcf701e8f83283cdff7281aad0c83b02a56084d6e601216210732833f9"
