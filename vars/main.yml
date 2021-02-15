@@ -15,6 +15,10 @@
 # limitations under the License.
 
 _cni_plugins_download:
+  "v0.9.1":
+    url: "https://github.com/containernetworking/plugins/releases/download/v0.9.1/cni-plugins-linux-amd64-v0.9.1.tgz"
+    dest: "/var/cache/ansible/962100bbc4baeaaa5748cdbfce941f756b1531c2eadb290129401498bfac21e7/cni-plugins-linux-amd64-v0.9.1.tgz"
+    checksum: "sha256:962100bbc4baeaaa5748cdbfce941f756b1531c2eadb290129401498bfac21e7"
   "v0.9.0":
     url: "https://github.com/containernetworking/plugins/releases/download/v0.9.0/cni-plugins-linux-amd64-v0.9.0.tgz"
     dest: "/var/cache/ansible/58a58d389895ba9f9bbd3ef330f186c0bb7484136d0bfb9b50152eed55d9ec24/cni-plugins-linux-amd64-v0.9.0.tgz"
