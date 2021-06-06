@@ -14,24 +14,28 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+_cni_plugins_version:
+  "v0.9": "v0.9.1"
+  "v0.8": "v0.8.7"
+
 _cni_plugins_download:
   "v0.9.1":
     url: "http://github.com/containernetworking/plugins/releases/download/v0.9.1/cni-plugins-linux-amd64-v0.9.1.tgz"
-    dest: "/var/cache/ansible/962100bbc4baeaaa5748cdbfce941f756b1531c2eadb290129401498bfac21e7/cni-plugins-linux-amd64-v0.9.1.tgz"
-    sha256sum: "962100bbc4baeaaa5748cdbfce941f756b1531c2eadb290129401498bfac21e7"
+    dest: "/tmp/962100bbc4baeaaa5748cdbfce941f756b1531c2eadb290129401498bfac21e7/cni-plugins-linux-amd64-v0.9.1.tgz"
+    checksum: "962100bbc4baeaaa5748cdbfce941f756b1531c2eadb290129401498bfac21e7"
   "v0.9.0":
     url: "http://github.com/containernetworking/plugins/releases/download/v0.9.0/cni-plugins-linux-amd64-v0.9.0.tgz"
-    dest: "/var/cache/ansible/58a58d389895ba9f9bbd3ef330f186c0bb7484136d0bfb9b50152eed55d9ec24/cni-plugins-linux-amd64-v0.9.0.tgz"
-    sha256sum: "58a58d389895ba9f9bbd3ef330f186c0bb7484136d0bfb9b50152eed55d9ec24"
+    dest: "/tmp/58a58d389895ba9f9bbd3ef330f186c0bb7484136d0bfb9b50152eed55d9ec24/cni-plugins-linux-amd64-v0.9.0.tgz"
+    checksum: "58a58d389895ba9f9bbd3ef330f186c0bb7484136d0bfb9b50152eed55d9ec24"
   "v0.8.7":
     url: "http://github.com/containernetworking/plugins/releases/download/v0.8.7/cni-plugins-linux-amd64-v0.8.7.tgz"
-    dest: "/var/cache/ansible/977824932d5667c7a37aa6a3cbba40100a6873e7bd97e83e8be837e3e7afd0a8/cni-plugins-linux-amd64-v0.8.7.tgz"
-    sha256sum: "977824932d5667c7a37aa6a3cbba40100a6873e7bd97e83e8be837e3e7afd0a8"
+    dest: "/tmp/977824932d5667c7a37aa6a3cbba40100a6873e7bd97e83e8be837e3e7afd0a8/cni-plugins-linux-amd64-v0.8.7.tgz"
+    checksum: "977824932d5667c7a37aa6a3cbba40100a6873e7bd97e83e8be837e3e7afd0a8"
   "v0.8.6":
     url: "http://github.com/containernetworking/plugins/releases/download/v0.8.6/cni-plugins-linux-amd64-v0.8.6.tgz"
-    dest: "/var/cache/ansible/994fbfcdbb2eedcfa87e48d8edb9bb365f4e2747a7e47658482556c12fd9b2f5/cni-plugins-linux-amd64-v0.8.6.tgz"
-    sha256sum: "994fbfcdbb2eedcfa87e48d8edb9bb365f4e2747a7e47658482556c12fd9b2f5"
+    dest: "/tmp/994fbfcdbb2eedcfa87e48d8edb9bb365f4e2747a7e47658482556c12fd9b2f5/cni-plugins-linux-amd64-v0.8.6.tgz"
+    checksum: "994fbfcdbb2eedcfa87e48d8edb9bb365f4e2747a7e47658482556c12fd9b2f5"
   "v0.8.5":
     url: "http://github.com/containernetworking/plugins/releases/download/v0.8.5/cni-plugins-linux-amd64-v0.8.5.tgz"
-    dest: "/var/cache/ansible/bd682ffcf701e8f83283cdff7281aad0c83b02a56084d6e601216210732833f9/cni-plugins-linux-amd64-v0.8.5.tgz"
-    sha256sum: "bd682ffcf701e8f83283cdff7281aad0c83b02a56084d6e601216210732833f9"
+    dest: "/tmp/bd682ffcf701e8f83283cdff7281aad0c83b02a56084d6e601216210732833f9/cni-plugins-linux-amd64-v0.8.5.tgz"
+    checksum: "bd682ffcf701e8f83283cdff7281aad0c83b02a56084d6e601216210732833f9"

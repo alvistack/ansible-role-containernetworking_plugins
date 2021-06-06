@@ -13,12 +13,3 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-# CNI Plugins release.
-cni_plugins_release: "v0.9"
-
-# CNI Plugins version.
-cni_plugins_version: "{{ _cni_plugins_version[cni_plugins_release] }}"
-
-# CNI Plugins download details.
-cni_plugins_download: "{{ _cni_plugins_download[cni_plugins_version] }}"
