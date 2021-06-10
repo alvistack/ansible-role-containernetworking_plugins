@@ -4,6 +4,7 @@
 
 ### Major Changes
 
+  - Rename role as `containernetworking_plugins`
   - Support Debian 11
   - Support openSUSE Leap 15.3
   - Improve download archive logic
