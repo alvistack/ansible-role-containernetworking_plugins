@@ -4,6 +4,7 @@
 
 ### Major Changes
 
+  - Upgrade minimal Ansible community package support to 4.1.0
   - Rename role as `containernetworking_plugins`
   - Support Debian 11
   - Support openSUSE Leap 15.3
