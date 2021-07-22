@@ -62,42 +62,6 @@
     state: "{{ item.state | default('directory') }}"
   loop:
     - { dest: "/etc/cni/net.d" }
-    - { dest: "/opt/cni/bin" }
-
-- name: download archive
-  shell: |
-    set -euxo pipefail
-    mkdir -p /var/log/ansible
-    exec &> >(tee -a /var/log/ansible/{{ cni_plugins_download.checksum }}-get_url.log)
-    TMP_DIR="$(mktemp -d)" \
-      && cd $TMP_DIR \
-      && mkdir -p .{{ cni_plugins_download.dest | dirname }} \
-      && curl -skL -m 300 {{ cni_plugins_download.url }} > .{{ cni_plugins_download.dest }} \
-      && echo -n "{{ cni_plugins_download.checksum }} .{{ cni_plugins_download.dest }}" | sha256sum -c - \
-      && mkdir -p {{ cni_plugins_download.dest | dirname }} \
-      && mv .{{ cni_plugins_download.dest }} {{ cni_plugins_download.dest }} \
-      && rm -rf $TMP_DIR
-  args:
-    executable: "/bin/bash"
-    creates: "/var/log/ansible/{{ cni_plugins_download.checksum }}-get_url.log"
-  register: result
-  until: result is succeeded
-
-- name: unarchive package
-  shell: |
-    set -euxo pipefail
-    mkdir -p /var/log/ansible
-    exec &> >(tee -a /var/log/ansible/{{ cni_plugins_download.checksum }}-unarchive.log)
-    rm -rf /opt/cni/bin \
-      && mkdir -p /opt/cni/bin
-    cd /opt/cni/bin
-    TMP_DIR="$(mktemp -d)" \
-      && tar -zx -C $TMP_DIR -f {{ cni_plugins_download.dest }} \
-      && mv $TMP_DIR/* . \
-      && rm -rf $TMP_DIR
-  args:
-    executable: "/bin/bash"
-    creates: "/var/log/ansible/{{ cni_plugins_download.checksum }}-unarchive.log"
 
 - name: copy templates
   template:
@@ -118,19 +82,3 @@
     state: "{{ item.state | default('file') }}"
   loop:
     - { dest: "/etc/cni/net.d/99-loopback.conf" }
-    - { dest: "/opt/cni/bin/bandwidth", mode: "0755" }
-    - { dest: "/opt/cni/bin/bridge", mode: "0755" }
-    - { dest: "/opt/cni/bin/dhcp", mode: "0755" }
-    - { dest: "/opt/cni/bin/firewall", mode: "0755" }
-    - { dest: "/opt/cni/bin/flannel", mode: "0755" }
-    - { dest: "/opt/cni/bin/host-device", mode: "0755" }
-    - { dest: "/opt/cni/bin/host-local", mode: "0755" }
-    - { dest: "/opt/cni/bin/ipvlan", mode: "0755" }
-    - { dest: "/opt/cni/bin/loopback", mode: "0755" }
-    - { dest: "/opt/cni/bin/macvlan", mode: "0755" }
-    - { dest: "/opt/cni/bin/portmap", mode: "0755" }
-    - { dest: "/opt/cni/bin/ptp", mode: "0755" }
-    - { dest: "/opt/cni/bin/sbr", mode: "0755" }
-    - { dest: "/opt/cni/bin/static", mode: "0755" }
-    - { dest: "/opt/cni/bin/tuning", mode: "0755" }
-    - { dest: "/opt/cni/bin/vlan", mode: "0755" }

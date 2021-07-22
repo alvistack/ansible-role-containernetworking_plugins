@@ -18,12 +18,9 @@
   remote_user: root
   become: true
   tasks:
-    - name: prepare files
-      file:
-        dest: "{{ item.dest }}"
-        owner: "{{ item.owner | default('root') }}"
-        group: "{{ item.group | default('root') }}"
-        mode: "{{ item.mode | default('0644') }}"
-        state: "{{ item.state | default('file') }}"
-      loop:
-        - { dest: "/opt/cni/bin/flannel", mode: "0755" }
+    - name: flannel --version
+      environment:
+        PATH: "/usr/libexec/cni:/usr/lib/cni:/opt/cni/bin"
+      command: flannel --version
+      register: result
+      changed_when: result is not succeeded
