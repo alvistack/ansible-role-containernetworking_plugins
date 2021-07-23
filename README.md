@@ -1,13 +1,9 @@
 # Ansible Role for Kubernetes CNI Plugins
 
-[![Gitlab pipeline
-status](https://img.shields.io/gitlab/pipeline/alvistack/ansible-role-containernetworking_plugins/master)](https://gitlab.com/alvistack/ansible-role-containernetworking_plugins/-/pipelines)
-[![GitHub
-release](https://img.shields.io/github/release/alvistack/ansible-role-containernetworking_plugins.svg)](https://github.com/alvistack/ansible-role-containernetworking_plugins/releases)
-[![GitHub
-license](https://img.shields.io/github/license/alvistack/ansible-role-containernetworking_plugins.svg)](https://github.com/alvistack/ansible-role-containernetworking_plugins/blob/master/LICENSE)
-[![Ansible
-Role](https://img.shields.io/badge/galaxy-alvistack.containernetworking_plugins-blue.svg)](https://galaxy.ansible.com/alvistack/containernetworking_plugins)
+[![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/ansible-role-containernetworking_plugins/master)](https://gitlab.com/alvistack/ansible-role-containernetworking_plugins/-/pipelines)
+[![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-containernetworking_plugins.svg)](https://github.com/alvistack/ansible-role-containernetworking_plugins/releases)
+[![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-containernetworking_plugins.svg)](https://github.com/alvistack/ansible-role-containernetworking_plugins/blob/master/LICENSE)
+[![Ansible Role](https://img.shields.io/badge/galaxy-alvistack.containernetworking_plugins-blue.svg)](https://galaxy.ansible.com/alvistack/containernetworking_plugins)
 
 Ansible Role for Kubernetes CNI Plugins Installation.
 
@@ -43,8 +39,7 @@ This role could simply deploy to `localhost` as below:
 ## License
 
   - Code released under [Apache License 2.0](LICENSE)
-  - Docs released under [CC BY
-    4.0](http://creativecommons.org/licenses/by/4.0/)
+  - Docs released under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
 
 ## Author Information
 
