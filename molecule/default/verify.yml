@@ -18,9 +18,9 @@
   remote_user: root
   become: true
   tasks:
-    - name: flannel --version
+    - name: loopback --version
       environment:
         PATH: "/usr/libexec/cni:/usr/lib/cni:/opt/cni/bin"
-      command: flannel --version
+      command: loopback --version
       register: result
       changed_when: result is not succeeded
