@@ -1,5 +1,7 @@
 # Ansible Role for Kubernetes CNI Plugins
 
+<img src="/alvistack.svg" width="75" alt="AlviStack">
+
 [![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/ansible-role-containernetworking_plugins/master)](https://gitlab.com/alvistack/ansible-role-containernetworking_plugins/-/pipelines)
 [![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-containernetworking_plugins.svg)](https://github.com/alvistack/ansible-role-containernetworking_plugins/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-containernetworking_plugins.svg)](https://github.com/alvistack/ansible-role-containernetworking_plugins/blob/master/LICENSE)
