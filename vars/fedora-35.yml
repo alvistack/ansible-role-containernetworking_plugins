@@ -33,3 +33,4 @@ _yum_repository:
 
 _yum:
   - { state: "latest", name: "containernetworking-plugins" }
+  - { state: "latest", name: "containernetworking-plugins-dnsname" }
