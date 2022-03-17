@@ -21,6 +21,6 @@
     - name: loopback --version
       environment:
         PATH: "/usr/libexec/cni:/usr/lib/cni:/opt/cni/bin"
-      command: loopback --version
+      ansible.builtin.command: loopback --version
       register: result
       changed_when: result is not succeeded
