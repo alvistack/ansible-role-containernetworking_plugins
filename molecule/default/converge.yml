@@ -20,5 +20,5 @@
   tasks:
     - name: include role
       ansible.builtin.include_role:
-        name: containernetworking_plugins
-      tags: containernetworking_plugins
+        name: alvistack.containernetworking_plugins
+      tags: alvistack.containernetworking_plugins
