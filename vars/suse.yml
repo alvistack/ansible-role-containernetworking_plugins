@@ -32,5 +32,6 @@ _yum_repository:
     state: "present"
 
 _zypper:
+  - { state: "latest", name: "containernetworking" }
   - { state: "latest", name: "containernetworking-plugins" }
   - { state: "latest", name: "containernetworking-dnsname" }

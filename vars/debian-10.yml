@@ -26,5 +26,6 @@ _apt_repository:
     state: "present"
 
 _apt:
+  - { state: "latest", name: "containernetworking" }
   - { state: "latest", name: "containernetworking-plugins" }
   - { state: "latest", name: "containernetworking-dnsname" }
